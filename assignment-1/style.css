@@ -1,4 +1,285 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  background-color: #FAFAFA;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.9);
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 html {
   height: 100%;
   width: 100%;
+}
+
+th {
+  border: 1px solid #C9D3DE;
+  padding: 8px 10px;
+  font-weight: 800;
+}
+
+td {
+  border: 1px solid #C9D3DE;
+  padding: 8px 10px;
+}
+
+.shadow {
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000;
+}
+
+.row {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 12px #888888;
+}
+#header-left {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  justify-content: space-between;
+}
+
+.container {
+  min-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+#header-title {
+  font-weight: 800;
+  font-size: 25px
+}
+
+#header-avatar {
+  width: 50px;
+  height: 50px;
+  background-color: #E3E7ED;
+  font-size: 20px;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+#user-name {
+  font-size: 16px;
+  margin-left: 4px;
+}
+
+#content {
+  margin-top: 24px;
+}
+
+#search-bar {
+  justify-content: flex-end;
+}
+
+#input-search {
+  padding: 8px;
+  width: 250px;
+  color: #333333;
+  margin-right: 8px;
+  border: 1px solid #d3d3d3;
+  border-radius: 2px;
+}
+
+.btn {
+  padding: 7px 24px;
+  background-color: rgba(211, 58, 90, 1);
+  border: 1px solid rgba(211, 58, 90, 1);
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  transition: 0.2s all ease-in;
+}
+
+.btn:hover {
+  background-color: rgba(211, 58, 90, .8);
+}
+
+#btn-add {
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.table {
+  margin-top: 24px;
+}
+
+.w-table {
+  width: 100%;
+}
+
+.th-name {
+  width: 40%;
+}
+
+.th-author {
+  width: 40%;
+}
+
+.th-topic {
+  width: 40%;
+}
+
+.th-action {
+  width: 40%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  width: 500px;
+  min-height: 200px;
+  padding: 24px;
+  background-color: white;
+  position: relative;
+  margin: 150px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #888888;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.title-modal {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.exit-add {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.mt-10 {
+  margin-top: 20px;
+}
+
+.mb-10 {
+  margin-bottom: 20px;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.mb-2 {
+  margin-bottom: 4px;
+}
+
+.input-filed {
+  padding: 8px;
+}
+
+.select-topic {
+  padding: 8px;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.rounded {
+  border-radius: 4px;
+}
+
+.action-item {
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.modal-confirm {
+  display: none;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.btn-cancel {
+  background-color: rgba(255, 255, 255, 1);
+  color: #333333;
+  border: 1px solid #333333;
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.btn-cancel:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }
